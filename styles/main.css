@@ -1,0 +1,274 @@
+/* --------------- some default styles ---------------  */
+
+/* color variables  */
+:root {
+  --dark-color: #000;
+  --primary-text-color: #ff0000;
+  --default-light: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--dark-color);
+  font-family: "Raleway", sans-serif;
+}
+li {
+  list-style: none;
+  display: inline-block;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+button,
+textarea,
+input,
+select {
+  outline: none;
+}
+.typography-1 {
+  font-size: 2rem;
+  color: var(--primary-text-color);
+}
+
+/* ---------------default layout--------------- */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+/* ---------------main header styles---------------  */
+.main-header {
+  background: #111;
+  position: sticky;
+  top: 0;
+}
+.main-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+.main-header-logo img {
+  height: 50px;
+}
+.main-header-navigation {
+  display: flex;
+  justify-content: center;
+}
+.header-navigation-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-navigation-list a {
+  color: var(--default-light);
+}
+/* --------------- hidden icons in full screen --------------- */
+.nav-icon-hidden {
+  display: none;
+}
+.close-nav-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none;
+}
+.close-nav-button img {
+  height: 20px;
+}
+
+/* ---------------banner styles---------------  */
+.main-banner {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+  justify-content: center;
+}
+.banner-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner-section-typography {
+  font-size: 4rem;
+}
+.description-typogrph-2 {
+  font-size: 40px;
+  color: var(--default-light);
+  padding-top: 20px;
+  border-bottom: 2px solid var(--default-light);
+  padding-bottom: 10px;
+}
+.description-ph {
+  color: var(--default-light);
+  line-height: 1.7;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.banner-hero img {
+  height: 380px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* ---------------about section styles---------------  */
+.about-section {
+  box-shadow: rgba(255, 3, 3, 0.806) 0px 1px 4px 0px;
+  border-radius: 10px;
+  padding: 20px 10px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.about-section-inner {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin-top: 20px;
+}
+.about-section-typogrph-1 {
+  color: var(--primary-text-color);
+  font-size: 50px;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+.about-section-hero img {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+.about-section-ph {
+  padding: 10px;
+  color: var(--default-light);
+  line-height: 1.7;
+}
+
+/* ---------------awards section styles---------------  */
+.awards-section {
+  background-image: url("https://w0.peakpx.com/wallpaper/372/231/HD-wallpaper-f1-amoled-formula-car-black.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.awards-section-typography {
+  padding-bottom: 20px;
+  font-size: 2rem;
+}
+.awards-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.award-item {
+  border-color: var(--primary-text-color);
+  border-radius: 20px;
+}
+.award-item-title {
+  color: var(--default-light);
+  padding: 0 10px;
+  font-size: 30px;
+}
+.award-item-ph {
+  color: var(--default-light);
+  padding: 10px;
+  line-height: 1.7;
+}
+
+/* ---------------car section---------------  */
+.car-section {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.car-section-inner h1 {
+  color: var(--primary-text-color);
+  width: fit-content;
+  margin: auto;
+  font-size: 2rem;
+  padding-bottom: 20px;
+}
+.car-section-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+.car-hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.car-hero img {
+  max-width: 70%;
+  margin: auto;
+}
+.car-section-inner p {
+  color: var(--default-light);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ---------------footer styles---------------  */
+.footer {
+  background: #111;
+}
+.footer-inner {
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+.footer-social li a img {
+  height: 20px;
+}
+.copyright span {
+  color: var(--default-light);
+}
+
+/* ---------------responsive styles---------------  */
+@media only screen and (max-width: 600px) {
+  .main-header-navigation {
+    position: fixed;
+    top: 0;
+    width: auto;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background: #000000c9;
+    align-items: center;
+    transition: 0.3s;
+    width: 0%;
+  }
+  .nav-visible{
+    width: 100%;
+  }
+  .close-nav-button {
+    display: block;
+  }
+  .header-navigation-list {
+    flex-direction: column;
+  }
+  .nav-icon-hidden {
+    display: block;
+  }
+  .nav-icon-hidden img {
+    height: 25px;
+  }
+  .about-section-inner,
+  .main-banner,
+  .car-section-grid {
+    grid-template-columns: 100% !important;
+  }
+}
